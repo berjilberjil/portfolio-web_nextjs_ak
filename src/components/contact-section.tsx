@@ -1,28 +1,28 @@
 'use client'
 
-import { useState } from 'react'
-import { motion } from 'framer-motion'
-import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa'
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 export function ContactSectionComponent() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
-  })
+  });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData(prevState => ({ ...prevState, [name]: value }))
-  }
+    const { name, value } = e.target;
+    setFormData(prevState => ({ ...prevState, [name]: value }));
+  };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
+    e.preventDefault();
     // Here you would typically send the form data to your server or a third-party service
-    console.log('Form submitted:', formData)
+    console.log('Form submitted:', formData);
     // Reset form after submission
-    setFormData({ name: '', email: '', message: '' })
-  }
+    setFormData({ name: '', email: '', message: '' });
+  };
 
   return (
     <section id="contact" className="min-h-screen flex items-center justify-center py-20">
@@ -105,5 +105,7 @@ export function ContactSectionComponent() {
         </motion.form>
       </div>
     </section>
-  )
+  );
 }
+
+export default ContactSectionComponent;

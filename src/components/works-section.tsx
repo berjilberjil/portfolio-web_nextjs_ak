@@ -1,10 +1,10 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import Image from 'next/image'
-import { X } from 'lucide-react'
-import { SiFlutter } from 'react-icons/si'
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
+import { X } from 'lucide-react';
+import { SiFlutter } from 'react-icons/si';
 
 const works = [
   {
@@ -40,9 +40,29 @@ const works = [
     imageUrl: '/placeholder.svg?height=300&width=400',
     projectLink: 'https://example.com/social-dashboard'
   }
-]
+];
 
-function WorkCard({ work, onClick }) {
+type Work = {
+  id: number;
+  title: string;
+  shortDescription: string;
+  longDescription: string;
+  imageUrl: string;
+  projectLink: string;
+  icon?: JSX.Element;
+};
+
+type WorkCardProps = {
+  work: Work;
+  onClick: () => void;
+};
+
+type ProjectPopupProps = {
+  project: Work;
+  onClose: () => void;
+};
+
+function WorkCard({ work, onClick }: WorkCardProps) {
   return (
     <motion.div
       className="bg-[#1C1C1C] rounded-lg overflow-hidden cursor-pointer shadow-lg"
@@ -58,16 +78,16 @@ function WorkCard({ work, onClick }) {
         <p className="text-sm md:text-base text-gray-400">{work.shortDescription}</p>
       </div>
     </motion.div>
-  )
+  );
 }
 
-function ProjectPopup({ project, onClose }) {
+function ProjectPopup({ project, onClose }: ProjectPopupProps) {
   useEffect(() => {
-    document.body.style.overflow = 'hidden'
+    document.body.style.overflow = 'hidden';
     return () => {
-      document.body.style.overflow = 'unset'
-    }
-  }, [])
+      document.body.style.overflow = 'unset';
+    };
+  }, []);
 
   return (
     <motion.div
@@ -107,11 +127,11 @@ function ProjectPopup({ project, onClose }) {
         </a>
       </motion.div>
     </motion.div>
-  )
+  );
 }
 
 export function WorksSectionComponent() {
-  const [selectedProject, setSelectedProject] = useState(null)
+  const [selectedProject, setSelectedProject] = useState<Work | null>(null);
 
   return (
     <section id="works" className="py-12 md:py-20 bg-black">
@@ -143,5 +163,7 @@ export function WorksSectionComponent() {
         )}
       </AnimatePresence>
     </section>
-  )
+  );
 }
+
+export default WorksSectionComponent;

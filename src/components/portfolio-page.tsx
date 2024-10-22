@@ -81,3 +81,5 @@ export function PortfolioPageComponent() {
     </div>
   )
 }
+
+export default PortfolioPageComponent;

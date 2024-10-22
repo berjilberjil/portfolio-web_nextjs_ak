@@ -12,7 +12,16 @@ const tools = [
   { name: 'Git', icon: <SiGit className="text-4xl text-red-500" /> },
 ]
 
-const ToolCard = ({ tool }) => (
+type Tool = {
+  name: string;
+  icon: JSX.Element;
+};
+
+type ToolCardProps = {
+  tool: Tool;
+};
+
+const ToolCard = ({ tool }: ToolCardProps) => (
   <motion.div
     className="bg-[#1C1C1C] rounded-lg p-6 flex flex-col items-center justify-center shadow-lg"
     whileHover={{ scale: 1.05 }}
@@ -51,3 +60,5 @@ export function MyKitSectionComponent() {
     </section>
   )
 }
+
+export default MyKitSectionComponent;

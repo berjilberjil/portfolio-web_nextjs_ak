@@ -24,3 +24,5 @@ export function StickyButtonsComponent() {
     </div>
   )
 }
+
+export default StickyButtonsComponent;

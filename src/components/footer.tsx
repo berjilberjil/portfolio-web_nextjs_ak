@@ -1,6 +1,6 @@
 'use client'
 
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 export function FooterComponent() {
   return (
@@ -22,5 +22,7 @@ export function FooterComponent() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
+
+export default FooterComponent;
