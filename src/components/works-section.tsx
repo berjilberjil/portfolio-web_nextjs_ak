@@ -12,7 +12,7 @@ const works = [
     title: 'E-commerce App',
     shortDescription: 'A Flutter-based mobile app for online shopping',
     longDescription: 'This e-commerce app was built using Flutter and provides a seamless shopping experience. It features a clean UI, smooth animations, and integration with a backend API for real-time product updates and order processing.',
-    imageUrl: '/placeholder.svg?height=300&width=400',
+    imageUrl: 'https://www.clipartmax.com/png/middle/184-1841477_software-mobile-applications-web-development-web-developer-icon-png.png',
     projectLink: 'https://example.com/ecommerce-app',
     icon: <SiFlutter className="text-2xl text-blue-500" />
   },
@@ -21,7 +21,7 @@ const works = [
     title: 'Task Management Tool',
     shortDescription: 'A productivity app for teams',
     longDescription: 'This task management tool helps teams organize and track their projects efficiently. It offers real-time updates, task assignment, progress tracking, and integrates with popular project management tools.',
-    imageUrl: '/placeholder.svg?height=300&width=400',
+    imageUrl: 'https://www.clipartmax.com/png/middle/184-1841477_software-mobile-applications-web-development-web-developer-icon-png.png',
     projectLink: 'https://example.com/task-management'
   },
   {
@@ -29,7 +29,7 @@ const works = [
     title: 'Fitness Tracker',
     shortDescription: 'A health and wellness app',
     longDescription: 'This fitness tracker app helps users monitor their daily activities, set fitness goals, and track their progress. It integrates with wearable devices and provides personalized workout recommendations.',
-    imageUrl: '/placeholder.svg?height=300&width=400',
+    imageUrl: 'https://www.clipartmax.com/png/middle/184-1841477_software-mobile-applications-web-development-web-developer-icon-png.png',
     projectLink: 'https://example.com/fitness-tracker'
   },
   {
@@ -37,7 +37,7 @@ const works = [
     title: 'Social Media Dashboard',
     shortDescription: 'An analytics tool for social media managers',
     longDescription: 'This dashboard provides comprehensive analytics for social media managers. It aggregates data from multiple platforms, offers insights, and allows for scheduling posts across different networks.',
-    imageUrl: '/placeholder.svg?height=300&width=400',
+    imageUrl: 'https://www.clipartmax.com/png/middle/184-1841477_software-mobile-applications-web-development-web-developer-icon-png.png',
     projectLink: 'https://example.com/social-dashboard'
   }
 ];
