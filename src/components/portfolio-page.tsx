@@ -14,6 +14,8 @@ import TestimonialSection from './testimonial-section';
 import ContactSection from './contact-section';
 import Footer from './footer';
 import ProgressBar from './progress-bar';
+import MyAchievementsSection from './my-achievements-section';
+
 
 const fadeDownVariants = {
   hidden: { opacity: 0, y: -50 },
@@ -56,6 +58,7 @@ const PortfolioPageComponent = () => {
         <WorksSection />
         <MyKitSection />
         <ServicesSection />
+        <MyAchievementsSection/>
         <TestimonialSection />
         <ContactSection />
       </motion.div>

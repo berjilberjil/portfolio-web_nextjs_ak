@@ -5,7 +5,17 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'www.clipartmax.com',
+        hostname: 'media.licdn.com',
+        pathname: '/dms/image/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'play-lh.googleusercontent.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'bulkpe.in',
         pathname: '/**',
       },
     ],

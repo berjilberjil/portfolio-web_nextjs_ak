@@ -1,15 +1,20 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { SiFlutter, SiReact, SiTypescript, SiTailwindcss, SiFirebase, SiGit } from 'react-icons/si'
-
+import { SiFlutter, SiNodedotjs, SiGo, SiTypescript, SiTailwindcss, SiFirebase, SiGit, SiMongodb, SiNotion, SiFigma, SiAdobexd, SiSlack } from 'react-icons/si'
 const tools = [
   { name: 'Flutter', icon: <SiFlutter className="text-4xl text-blue-500" /> },
-  { name: 'React', icon: <SiReact className="text-4xl text-blue-400" /> },
+  { name: 'Node Js', icon: <SiNodedotjs className="text-4xl text-blue-400" /> },
+  { name: 'Go Lang', icon: <SiGo className="text-4xl text-blue-600" /> },
   { name: 'TypeScript', icon: <SiTypescript className="text-4xl text-blue-600" /> },
   { name: 'Tailwind CSS', icon: <SiTailwindcss className="text-4xl text-teal-400" /> },
   { name: 'Firebase', icon: <SiFirebase className="text-4xl text-yellow-500" /> },
   { name: 'Git', icon: <SiGit className="text-4xl text-red-500" /> },
+  { name: 'MongoDB', icon: <SiMongodb className="text-4xl text-green-500" /> },
+  { name: 'Notion', icon: <SiNotion className="text-4xl text-black" /> },
+  { name: 'Figma', icon: <SiFigma className="text-4xl text-pink-500" /> },
+  { name: 'Adobe XD', icon: <SiAdobexd className="text-4xl text-purple-500" /> },
+  { name: 'Slack', icon: <SiSlack className="text-4xl text-purple-600" /> },
 ]
 
 type Tool = {

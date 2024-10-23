@@ -4,41 +4,40 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { X } from 'lucide-react';
-import { SiFlutter } from 'react-icons/si';
 
 const works = [
   {
     id: 1,
-    title: 'E-commerce App',
-    shortDescription: 'A Flutter-based mobile app for online shopping',
-    longDescription: 'This e-commerce app was built using Flutter and provides a seamless shopping experience. It features a clean UI, smooth animations, and integration with a backend API for real-time product updates and order processing.',
-    imageUrl: 'https://www.clipartmax.com/png/middle/184-1841477_software-mobile-applications-web-development-web-developer-icon-png.png',
-    projectLink: 'https://example.com/ecommerce-app',
-    icon: <SiFlutter className="text-2xl text-blue-500" />
+    title: 'BulkPe App',
+    shortDescription: 'A Flutter-based mobile app for Bulk Transations (PlayStore)',
+    longDescription: 'Instant Business Banking for Indian MSMEs - Open Axis Bank Current Account in Minutes! Welcome to Bulkpe - Your Instant Business Banking Solution! Open a current account in under 5 minutes and experience seamless payments for Indian MSMEs. ',
+    imageUrl: '/images/bulkpe-app.png',
+    projectLink: 'https://play.google.com/store/apps/details?id=com.app.bulkpe&pcampaignid=web_share',
+    
   },
   {
     id: 2,
-    title: 'Task Management Tool',
-    shortDescription: 'A productivity app for teams',
-    longDescription: 'This task management tool helps teams organize and track their projects efficiently. It offers real-time updates, task assignment, progress tracking, and integrates with popular project management tools.',
-    imageUrl: 'https://www.clipartmax.com/png/middle/184-1841477_software-mobile-applications-web-development-web-developer-icon-png.png',
-    projectLink: 'https://example.com/task-management'
+    title: 'BulkPe WebApp',
+    shortDescription: 'A Flutter-based Web app for Enterprices',
+    longDescription: 'End-to-end banking and payments suite for businesses to scale and grow. Starting with opening a current account, collecting payments, making payouts, FD deposits and more products. A one stop solution for all your financial needs.',
+    imageUrl: 'https://bulkpe.in/assets/three_phone.webp',
+    projectLink: 'https://bulkpe.in/'
   },
   {
     id: 3,
-    title: 'Fitness Tracker',
-    shortDescription: 'A health and wellness app',
+    title: 'Weather App',
+    shortDescription: 'A Flutter-based app for Weather Check (PlayStore)',
     longDescription: 'This fitness tracker app helps users monitor their daily activities, set fitness goals, and track their progress. It integrates with wearable devices and provides personalized workout recommendations.',
-    imageUrl: 'https://www.clipartmax.com/png/middle/184-1841477_software-mobile-applications-web-development-web-developer-icon-png.png',
-    projectLink: 'https://example.com/fitness-tracker'
+    imageUrl: '/images/weather-app.png',
+    projectLink: 'https://play.google.com/store/apps/details?id=com.github.aakashak01.weatherapp&pcampaignid=web_share'
   },
   {
     id: 4,
-    title: 'Social Media Dashboard',
-    shortDescription: 'An analytics tool for social media managers',
-    longDescription: 'This dashboard provides comprehensive analytics for social media managers. It aggregates data from multiple platforms, offers insights, and allows for scheduling posts across different networks.',
-    imageUrl: 'https://www.clipartmax.com/png/middle/184-1841477_software-mobile-applications-web-development-web-developer-icon-png.png',
-    projectLink: 'https://example.com/social-dashboard'
+    title: 'Misscall Pay',
+    shortDescription: 'No SmartPhone? No Internet? No Problem! Misscall Pay can help you!',
+    longDescription: 'Indians began using mobile phones with "missed calls". Now anyone can make payments with it! We aim to make transacting without cash easy. As simple as the very first thing we did with mobile phones. Pay with MissCallPay!',
+    imageUrl: '/images/MissCallPay.png',
+    projectLink: 'https://ind.misscallpay.com'
   }
 ];
 
@@ -69,7 +68,7 @@ function WorkCard({ work, onClick }: WorkCardProps) {
       whileHover={{ scale: 1.05 }}
       onClick={onClick}
     >
-      <Image src={work.imageUrl} alt={work.title} width={400} height={300} className="w-full h-48 object-cover" />
+      <Image src={work.imageUrl} alt={work.title} width={400} height={300} className="w-full h-80 object-cover" />
       <div className="p-4 md:p-6">
         <div className="flex items-center justify-between mb-2">
           <h3 className="text-lg md:text-xl font-semibold text-white">{work.title}</h3>
@@ -99,7 +98,7 @@ function ProjectPopup({ project, onClose }: ProjectPopupProps) {
     >
       <motion.div
         initial={{ scale: 0.9, opacity: 0, y: -50 }}
-        animate={{ scale: 1, opacity: 1, y: 0 }}
+        animate={{ scale: 1, opacity: 1, y: -700 }}
         exit={{ scale: 0.9, opacity: 0, y: -50 }}
         className="bg-[#1C1C1C] rounded-lg p-6 md:p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto relative"
         onClick={(e) => e.stopPropagation()}
@@ -111,7 +110,10 @@ function ProjectPopup({ project, onClose }: ProjectPopupProps) {
         >
           <X size={24} />
         </button>
-        <Image src={project.imageUrl} alt={project.title} width={400} height={300} className="w-full h-48 md:h-64 object-cover rounded-lg mb-4 md:mb-6" />
+        <Image src={project.imageUrl} 
+        alt={project.title} width={400} 
+        height={300} 
+        className="w-full h-48 md:h-64 object-cover rounded-lg mb-4 md:mb-6" />
         <div className="flex items-center justify-between mb-2 md:mb-4">
           <h3 className="text-xl md:text-2xl font-semibold text-white">{project.title}</h3>
           {project.icon && <div>{project.icon}</div>}

@@ -5,19 +5,19 @@ import { motion } from 'framer-motion'
 const aboutBlocks = [
   {
     title: 'Experience',
-    content: 'Over 5 years in mobile app development, specializing in Flutter and cross-platform solutions.'
+    content: 'I’m a developer with experience in mobile and web apps, specializing in fintech projects using Flutter. I’ve tackled challenges like the “30 Days, 30 Features” and learned from each project I’ve built, successful or not.'
   },
   {
     title: 'Expertise',
-    content: 'Flutter, Dart, UI/UX Design, State Management, RESTful API Integration, Firebase, CI/CD'
+    content: 'I focus on Flutter for mobile and Next.js for web development, integrating SDKs and adding creative features like keyboard shortcuts and image generation for a better user experience.'
   },
   {
     title: 'Philosophy',
-    content: 'Committed to clean code, user-centric design, and continuous learning in the ever-evolving tech landscape.'
+    content: 'Tech should solve problems and bring joy. I aim to create apps that are functional, enjoyable, and always push the limits of what’s possible.'
   },
   {
     title: 'Goal',
-    content: 'To create intuitive, high-performance applications that solve real-world problems and delight users.'
+    content: 'To develop user-friendly apps that people love and scale my freelance business while continuing to learn and grow in the tech field.'
   }
 ]
 
