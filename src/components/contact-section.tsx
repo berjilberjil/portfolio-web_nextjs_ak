@@ -15,7 +15,7 @@ export function ContactSectionComponent() {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Contact Me</h2>
           <p className="text-lg mb-8 text-gray-300">
-            Interested in working together? Fill out the form below with some info about your project and I will get back to you as soon as I can.
+            Interested in working together? Reach out with some info about your project, and I will get back to you as soon as I can.
           </p>
           <div className="flex space-x-4 mb-8">
             <a href="https://github.com/AakashAK01" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors duration-200">

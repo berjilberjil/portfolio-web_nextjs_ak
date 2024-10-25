@@ -10,7 +10,7 @@ const works = [
   {
     id: 1,
     title: 'BulkPe App',
-    shortDescription: 'A Flutter-based mobile app for Bulk Transations (PlayStore)',
+    shortDescription: 'A Flutter-based mobile app for Bulk Transactions (PlayStore)',
     longDescription: 'Instant Business Banking for Indian MSMEs - Open an Axis Bank Current Account in Minutes! Welcome to BulkPe - Your Instant Business Banking Solution! Open a current account in under 5 minutes and experience seamless payments for Indian MSMEs.',
     imageUrl: '/images/bulkpe-app.png',
     projectLink: 'https://play.google.com/store/apps/details?id=com.app.bulkpe&pcampaignid=web_share',
@@ -18,7 +18,7 @@ const works = [
   {
     id: 2,
     title: 'BulkPe WebApp',
-    shortDescription: 'A Flutter-based Web app Product for Enterprices',
+    shortDescription: 'A Flutter-based Web app Product for Enterprises',
     longDescription: 'End-to-end banking and payments suite for businesses to scale and grow.',
     imageUrl: 'https://bulkpe.in/assets/three_phone.webp',
     projectLink: 'https://bulkpe.in/'
