@@ -47,7 +47,7 @@ function WorkCard({ work, onClick }: { work: Project; onClick: () => void }) {
       whileHover={{ scale: 1.05 }}
       onClick={onClick}
     >
-      <Image src={work.imageUrl} alt={work.title} width={400} height={300} className="w-full h-48 object-cover" />
+      <Image src={work.imageUrl} alt={work.title} width={400} height={300} className="w-full h-60 object-cover" />
       <div className="p-4 md:p-6">
         <div className="flex items-center justify-between mb-2">
           <h3 className="text-lg md:text-xl font-semibold text-white">{work.title}</h3>
@@ -123,7 +123,7 @@ export function WorksSectionComponent() {
 
   return (
     <section id="works" className="py-12 md:py-20 bg-black">
-      <div className="mx-auto px-[6%]">
+      <div className="mx-auto px-[12%]">
         <motion.h2 
           className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 md:mb-12 text-center text-white"
           initial={{ opacity: 0, y: -20 }}
@@ -132,7 +132,7 @@ export function WorksSectionComponent() {
         >
           My Works
         </motion.h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-8">
           {works.map((work) => (
             <WorkCard
               key={work.id}

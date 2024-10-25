@@ -40,7 +40,7 @@ const ToolCard = ({ tool }: ToolCardProps) => (
 export function MyKitSectionComponent() {
   return (
     <section id="my-kit" className="py-12 md:py-20 bg-black">
-      <div className="mx-auto px-[6%]">
+      <div className="mx-auto px-[12%]">
         <motion.h2 
           className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 md:mb-12 text-center text-white"
           initial={{ opacity: 0, y: -20 }}

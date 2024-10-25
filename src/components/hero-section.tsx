@@ -17,7 +17,7 @@ export function HeroSectionComponent() {
   }
   return (
     <section id="home" className="min-h-screen flex items-center">
-      <div className="max-w-3xl pl-[6%]">
+      <div className="max-w-3xl pl-[8%]">
         <motion.h1 
           className="text-5xl md:text-7xl font-bold mb-4"
           initial={{ opacity: 0, y: -20 }}

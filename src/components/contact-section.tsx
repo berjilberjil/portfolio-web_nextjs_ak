@@ -24,10 +24,10 @@ export function ContactSectionComponent() {
             <a href="https://www.linkedin.com/in/aakashsaravanannkl/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors duration-200">
               <FaLinkedin size={24} />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors duration-200">
+            <a href="https://www.instagram.com/your_friendlyhood_aakash/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors duration-200">
               <FaInstagram size={24} />
             </a>
-            <a href="mailto:your-email@example.com" className="text-white hover:text-gray-300 transition-colors duration-200">
+            <a href="mailto:aakashnkl@gmail.com" className="text-white hover:text-gray-300 transition-colors duration-200">
               <FaEnvelope size={24} />
             </a>
           </div>
@@ -35,7 +35,7 @@ export function ContactSectionComponent() {
             className="px-4 py-2 bg-white text-black font-bold rounded-md hover:bg-opacity-90 transition-colors duration-200"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => window.location.href = 'mailto:your-email@example.com'}
+            onClick={() => window.location.href = 'mailto:aakashnkl@gmail.com'}
           >
             Write Me Directly
           </motion.button>
