@@ -10,7 +10,7 @@ import AboutSection from './about-section';
 import WorksSection from './works-section';
 import MyKitSection from './my-kit-section';
 import ServicesSection from './services-section';
-import TestimonialSection from './testimonial-section';
+// import TestimonialSection from './testimonial-section';
 import ContactSection from './contact-section';
 import Footer from './footer';
 import ProgressBar from './progress-bar';
@@ -59,7 +59,7 @@ const PortfolioPageComponent = () => {
         <MyKitSection />
         <ServicesSection />
         <MyAchievementsSection/>
-        <TestimonialSection />
+        {/* <TestimonialSection /> */}
         <ContactSection />
       </motion.div>
       <Footer />

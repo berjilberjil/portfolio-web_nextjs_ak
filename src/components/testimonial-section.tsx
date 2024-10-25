@@ -6,10 +6,10 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 const testimonials = [
   {
     id: 1,
-    name: 'John Doe',
-    role: 'CEO, TechCorp',
-    content: 'Working with Aakash was an absolute pleasure. His expertise in Flutter development helped us create an outstanding mobile app.',
-    avatar: 'https://via.placeholder.com/80'
+    name: 'Sathya Narayanan',
+    role: 'Co-founder at Bulkpe',
+    content: "Integrating Bulkpe's APIs just became simple. No, not just simple—deadly simple.Great work Aakash S and Sathish Ramasami",
+    avatar: 'https://media.licdn.com/dms/image/v2/C5603AQEzInpp4fiBxA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1645216051327?e=1735171200&v=beta&t=TMZPFRr9-MCR7VoaWz0Whx-8V7yjnVcO88BOfd4wxms'
   },
   {
     id: 2,

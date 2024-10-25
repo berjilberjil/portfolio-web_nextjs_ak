@@ -1,25 +1,25 @@
 'use client'
 
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import Image from 'next/image';
-import { X } from 'lucide-react';
+import { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image'
+import { X } from 'lucide-react'
+
 
 const works = [
   {
     id: 1,
     title: 'BulkPe App',
     shortDescription: 'A Flutter-based mobile app for Bulk Transations (PlayStore)',
-    longDescription: 'Instant Business Banking for Indian MSMEs - Open Axis Bank Current Account in Minutes! Welcome to Bulkpe - Your Instant Business Banking Solution! Open a current account in under 5 minutes and experience seamless payments for Indian MSMEs. ',
+    longDescription: 'Instant Business Banking for Indian MSMEs - Open an Axis Bank Current Account in Minutes! Welcome to BulkPe - Your Instant Business Banking Solution! Open a current account in under 5 minutes and experience seamless payments for Indian MSMEs.',
     imageUrl: '/images/bulkpe-app.png',
     projectLink: 'https://play.google.com/store/apps/details?id=com.app.bulkpe&pcampaignid=web_share',
-    
   },
   {
     id: 2,
     title: 'BulkPe WebApp',
-    shortDescription: 'A Flutter-based Web app for Enterprices',
-    longDescription: 'End-to-end banking and payments suite for businesses to scale and grow. Starting with opening a current account, collecting payments, making payouts, FD deposits and more products. A one stop solution for all your financial needs.',
+    shortDescription: 'A Flutter-based Web app Product for Enterprices',
+    longDescription: 'End-to-end banking and payments suite for businesses to scale and grow.',
     imageUrl: 'https://bulkpe.in/assets/three_phone.webp',
     projectLink: 'https://bulkpe.in/'
   },
@@ -40,35 +40,14 @@ const works = [
     projectLink: 'https://ind.misscallpay.com'
   }
 ];
-
-type Work = {
-  id: number;
-  title: string;
-  shortDescription: string;
-  longDescription: string;
-  imageUrl: string;
-  projectLink: string;
-  icon?: JSX.Element;
-};
-
-type WorkCardProps = {
-  work: Work;
-  onClick: () => void;
-};
-
-type ProjectPopupProps = {
-  project: Work;
-  onClose: () => void;
-};
-
-function WorkCard({ work, onClick }: WorkCardProps) {
+function WorkCard({ work, onClick }: { work: Project; onClick: () => void }) {
   return (
     <motion.div
       className="bg-[#1C1C1C] rounded-lg overflow-hidden cursor-pointer shadow-lg"
       whileHover={{ scale: 1.05 }}
       onClick={onClick}
     >
-      <Image src={work.imageUrl} alt={work.title} width={400} height={300} className="w-full h-80 object-cover" />
+      <Image src={work.imageUrl} alt={work.title} width={400} height={300} className="w-full h-48 object-cover" />
       <div className="p-4 md:p-6">
         <div className="flex items-center justify-between mb-2">
           <h3 className="text-lg md:text-xl font-semibold text-white">{work.title}</h3>
@@ -77,16 +56,26 @@ function WorkCard({ work, onClick }: WorkCardProps) {
         <p className="text-sm md:text-base text-gray-400">{work.shortDescription}</p>
       </div>
     </motion.div>
-  );
+  )
 }
 
-function ProjectPopup({ project, onClose }: ProjectPopupProps) {
+interface Project {
+  id: number;
+  title: string;
+  shortDescription: string;
+  longDescription: string;
+  imageUrl: string;
+  projectLink: string;
+  icon?: JSX.Element;
+}
+
+function ProjectPopup({ project, onClose }: { project: Project; onClose: () => void }) {
   useEffect(() => {
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden'
     return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, []);
+      document.body.style.overflow = 'unset'
+    }
+  }, [])
 
   return (
     <motion.div
@@ -98,9 +87,9 @@ function ProjectPopup({ project, onClose }: ProjectPopupProps) {
     >
       <motion.div
         initial={{ scale: 0.9, opacity: 0, y: -50 }}
-        animate={{ scale: 1, opacity: 1, y: -700 }}
+        animate={{ scale: 1, opacity: 1, y: 0 }}
         exit={{ scale: 0.9, opacity: 0, y: -50 }}
-        className="bg-[#1C1C1C] rounded-lg p-6 md:p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto relative"
+        className="bg-[#1C1C1C] rounded-lg p-6 md:p-8 max-w-2xl w-full relative"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -110,10 +99,7 @@ function ProjectPopup({ project, onClose }: ProjectPopupProps) {
         >
           <X size={24} />
         </button>
-        <Image src={project.imageUrl} 
-        alt={project.title} width={400} 
-        height={300} 
-        className="w-full h-48 md:h-64 object-cover rounded-lg mb-4 md:mb-6" />
+        <Image src={project.imageUrl} alt={project.title} width={400} height={300} className="w-full h-48 md:h-64 object-cover rounded-lg mb-4 md:mb-6" />
         <div className="flex items-center justify-between mb-2 md:mb-4">
           <h3 className="text-xl md:text-2xl font-semibold text-white">{project.title}</h3>
           {project.icon && <div>{project.icon}</div>}
@@ -129,11 +115,11 @@ function ProjectPopup({ project, onClose }: ProjectPopupProps) {
         </a>
       </motion.div>
     </motion.div>
-  );
+  )
 }
 
 export function WorksSectionComponent() {
-  const [selectedProject, setSelectedProject] = useState<Work | null>(null);
+  const [selectedProject, setSelectedProject] = useState<typeof works[0] | null>(null)
 
   return (
     <section id="works" className="py-12 md:py-20 bg-black">
@@ -165,7 +151,7 @@ export function WorksSectionComponent() {
         )}
       </AnimatePresence>
     </section>
-  );
+  )
 }
 
 export default WorksSectionComponent;

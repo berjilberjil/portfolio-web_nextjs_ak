@@ -1,29 +1,9 @@
 'use client'
 
-import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa';
 
 export function ContactSectionComponent() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({ ...prevState, [name]: value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // Here you would typically send the form data to your server or a third-party service
-    console.log('Form submitted:', formData);
-    // Reset form after submission
-    setFormData({ name: '', email: '', message: '' });
-  };
-
   return (
     <section id="contact" className="min-h-screen flex items-center justify-center py-20">
       <div className="max-w-6xl w-full px-4 flex flex-col md:flex-row gap-12">
@@ -37,19 +17,30 @@ export function ContactSectionComponent() {
           <p className="text-lg mb-8 text-gray-300">
             Interested in working together? Fill out the form below with some info about your project and I will get back to you as soon as I can.
           </p>
-          <div className="flex space-x-4">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors duration-200">
+          <div className="flex space-x-4 mb-8">
+            <a href="https://github.com/AakashAK01" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors duration-200">
               <FaGithub size={24} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors duration-200">
+            <a href="https://www.linkedin.com/in/aakashsaravanannkl/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors duration-200">
               <FaLinkedin size={24} />
             </a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors duration-200">
               <FaInstagram size={24} />
             </a>
+            <a href="mailto:your-email@example.com" className="text-white hover:text-gray-300 transition-colors duration-200">
+              <FaEnvelope size={24} />
+            </a>
           </div>
+          <motion.button
+            className="px-4 py-2 bg-white text-black font-bold rounded-md hover:bg-opacity-90 transition-colors duration-200"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => window.location.href = 'mailto:your-email@example.com'}
+          >
+            Write Me Directly
+          </motion.button>
         </motion.div>
-        <motion.form 
+        {/* <motion.form 
           onSubmit={handleSubmit}
           className="md:w-1/2 space-y-6"
           initial={{ opacity: 0, x: 20 }}
@@ -102,7 +93,7 @@ export function ContactSectionComponent() {
               Send Message
             </motion.button>
           </div>
-        </motion.form>
+        </motion.form> */}
       </div>
     </section>
   );
