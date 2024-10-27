@@ -1,44 +1,52 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import Image from 'next/image'
-import { X } from 'lucide-react'
-
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
+import { X } from "lucide-react";
 
 const works = [
   {
     id: 1,
-    title: 'BulkPe App',
-    shortDescription: 'A Flutter-based mobile app for Bulk Transactions (PlayStore)',
-    longDescription: 'Instant Business Banking for Indian MSMEs - Open an Axis Bank Current Account in Minutes! Welcome to BulkPe - Your Instant Business Banking Solution! Open a current account in under 5 minutes and experience seamless payments for Indian MSMEs.',
-    imageUrl: '/images/bulkpe-app.png',
-    projectLink: 'https://play.google.com/store/apps/details?id=com.app.bulkpe&pcampaignid=web_share',
+    title: "Bulkpe App",
+    shortDescription:
+      "A Flutter-based mobile app for Bulk Transactions (PlayStore)",
+    longDescription:
+      "Instant Business Banking for Indian MSMEs - Open an Axis Bank Current Account in Minutes! Welcome to BulkPe - Your Instant Business Banking Solution! Open a current account in under 5 minutes and experience seamless payments for Indian MSMEs.",
+    imageUrl: "/images/bulkpe-app.png",
+    projectLink:
+      "https://play.google.com/store/apps/details?id=com.app.bulkpe&pcampaignid=web_share",
   },
   {
     id: 2,
-    title: 'BulkPe WebApp',
-    shortDescription: 'A Flutter-based Web app Product for Enterprises',
-    longDescription: 'End-to-end banking and payments suite for businesses to scale and grow.',
-    imageUrl: 'https://bulkpe.in/assets/three_phone.webp',
-    projectLink: 'https://bulkpe.in/'
+    title: "Bulkpe WebApp",
+    shortDescription: "A Flutter-based Web app Product for Enterprises",
+    longDescription:
+      "End-to-end banking and payments suite for businesses to scale and grow.",
+    imageUrl: "https://bulkpe.in/assets/three_phone.webp",
+    projectLink: "https://bulkpe.in/",
   },
   {
     id: 3,
-    title: 'Weather App',
-    shortDescription: 'A Flutter-based app for Weather Check (PlayStore)',
-    longDescription: 'This fitness tracker app helps users monitor their daily activities, set fitness goals, and track their progress. It integrates with wearable devices and provides personalized workout recommendations.',
-    imageUrl: '/images/weather-app.png',
-    projectLink: 'https://play.google.com/store/apps/details?id=com.github.aakashak01.weatherapp&pcampaignid=web_share'
+    title: "Weather App",
+    shortDescription: "A Flutter-based app for Weather Check (PlayStore)",
+    longDescription:
+      "Featuring a clean and intuitive interface, this Weather App makes it easy to find the information you need. You can view current temperature, wind speed and direction, humidity, and more.",
+    imageUrl: "/images/weather-app.png",
+    projectLink:
+      "https://play.google.com/store/apps/details?id=com.github.aakashak01.weatherapp&pcampaignid=web_share",
   },
   {
     id: 4,
-    title: 'Misscall Pay',
-    shortDescription: 'No SmartPhone? No Internet? No Problem! Misscall Pay can help you!',
-    longDescription: 'Indians began using mobile phones with "missed calls". Now anyone can make payments with it! We aim to make transacting without cash easy. As simple as the very first thing we did with mobile phones. Pay with MissCallPay!',
-    imageUrl: '/images/MissCallPay.png',
-    projectLink: 'https://ind.misscallpay.com'
-  }
+    title: "Misscallpay",
+    shortDescription:
+      "No SmartPhone? No Internet? No Problem! Misscall Pay can help you!",
+    longDescription:
+      'Indian\'s began using mobile phones with "missed calls". Now anyone can make payments with it! We aim to make transacting without cash easy. As simple as the very first thing we did with mobile phones. Pay with MissCallPay!',
+    imageUrl: "/images/MissCallPay.png",
+    projectLink:
+      "https://play.google.com/store/apps/details?id=com.misscallpay.bharat",
+  },
 ];
 function WorkCard({ work, onClick }: { work: Project; onClick: () => void }) {
   return (
@@ -47,16 +55,26 @@ function WorkCard({ work, onClick }: { work: Project; onClick: () => void }) {
       whileHover={{ scale: 1.05 }}
       onClick={onClick}
     >
-      <Image src={work.imageUrl} alt={work.title} width={400} height={300} className="w-full h-60 object-cover" />
+      <Image
+        src={work.imageUrl}
+        alt={work.title}
+        width={400}
+        height={300}
+        className="w-full h-60 object-cover"
+      />
       <div className="p-4 md:p-6">
         <div className="flex items-center justify-between mb-2">
-          <h3 className="text-lg md:text-xl font-semibold text-white">{work.title}</h3>
+          <h3 className="text-lg md:text-xl font-semibold text-white">
+            {work.title}
+          </h3>
           {work.icon && <div>{work.icon}</div>}
         </div>
-        <p className="text-sm md:text-base text-gray-400">{work.shortDescription}</p>
+        <p className="text-sm md:text-base text-gray-400">
+          {work.shortDescription}
+        </p>
       </div>
     </motion.div>
-  )
+  );
 }
 
 interface Project {
@@ -69,13 +87,19 @@ interface Project {
   icon?: JSX.Element;
 }
 
-function ProjectPopup({ project, onClose }: { project: Project; onClose: () => void }) {
+function ProjectPopup({
+  project,
+  onClose,
+}: {
+  project: Project;
+  onClose: () => void;
+}) {
   useEffect(() => {
-    document.body.style.overflow = 'hidden'
+    document.body.style.overflow = "hidden";
     return () => {
-      document.body.style.overflow = 'unset'
-    }
-  }, [])
+      document.body.style.overflow = "unset";
+    };
+  }, []);
 
   return (
     <motion.div
@@ -99,12 +123,22 @@ function ProjectPopup({ project, onClose }: { project: Project; onClose: () => v
         >
           <X size={24} />
         </button>
-        <Image src={project.imageUrl} alt={project.title} width={400} height={300} className="w-full h-48 md:h-64 object-cover rounded-lg mb-4 md:mb-6" />
+        <Image
+          src={project.imageUrl}
+          alt={project.title}
+          width={400}
+          height={300}
+          className="w-full h-48 md:h-64 object-cover rounded-lg mb-4 md:mb-6"
+        />
         <div className="flex items-center justify-between mb-2 md:mb-4">
-          <h3 className="text-xl md:text-2xl font-semibold text-white">{project.title}</h3>
+          <h3 className="text-xl md:text-2xl font-semibold text-white">
+            {project.title}
+          </h3>
           {project.icon && <div>{project.icon}</div>}
         </div>
-        <p className="text-sm md:text-base text-gray-300 mb-4 md:mb-6">{project.longDescription}</p>
+        <p className="text-sm md:text-base text-gray-300 mb-4 md:mb-6">
+          {project.longDescription}
+        </p>
         <a
           href={project.projectLink}
           target="_blank"
@@ -115,16 +149,18 @@ function ProjectPopup({ project, onClose }: { project: Project; onClose: () => v
         </a>
       </motion.div>
     </motion.div>
-  )
+  );
 }
 
 export function WorksSectionComponent() {
-  const [selectedProject, setSelectedProject] = useState<typeof works[0] | null>(null)
+  const [selectedProject, setSelectedProject] = useState<
+    (typeof works)[0] | null
+  >(null);
 
   return (
     <section id="works" className="py-12 md:py-20 bg-black">
       <div className="mx-auto px-[12%]">
-        <motion.h2 
+        <motion.h2
           className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 md:mb-12 text-center text-white"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -151,7 +187,7 @@ export function WorksSectionComponent() {
         )}
       </AnimatePresence>
     </section>
-  )
+  );
 }
 
 export default WorksSectionComponent;

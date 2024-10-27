@@ -1,7 +1,7 @@
-'use client'
+"use client";
 
-import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 interface Achievement {
   id: number;
@@ -14,20 +14,26 @@ const achievements: Achievement[] = [
   {
     id: 1,
     title: "Bulkpe's API",
-    linkedInPostUrl: 'https://www.linkedin.com/embed/feed/update/urn:li:share:7229053706892140544',
-    description: "I’m excited to share how our web application simplifies API integration with Bulkpe by enabling real-time testing of APIs, effortless code generation in over 40 programming languages, and seamless integration into any codebase, all while showcasing our commitment to enhancing the developer experience; special thanks to Sathish Ramasami for his invaluable support throughout this journey!",
+    linkedInPostUrl:
+      "https://www.linkedin.com/embed/feed/update/urn:li:share:7229053706892140544",
+    description:
+      "I’m excited to share how our web application simplifies API integration with Bulkpe by enabling real-time testing of APIs, effortless code generation in over 40 programming languages, and seamless integration into any codebase, all while showcasing our commitment to enhancing the developer experience; special thanks to Sathish Ramasami for his invaluable support throughout this journey!",
   },
   {
     id: 2,
-    title: 'Keyboard Shortcuts for BulkPe',
-    linkedInPostUrl: 'https://www.youtube.com/embed/nOUPGFeymGg?autoplay=1&mute=1&si=1pjjtEI2wNu4c6cn',
-    description: 'As a developer at Bulkpe, I’m excited to showcase how our innovative keyboard shortcuts can streamline every task, putting the power of efficiency right at your fingertips. These shortcuts are designed to enhance productivity, allowing users to navigate and execute commands quickly, reducing time spent on repetitive tasks.',
+    title: "Keyboard Shortcuts for BulkPe",
+    linkedInPostUrl:
+      "https://www.youtube.com/embed/nOUPGFeymGg?autoplay=1&mute=1&si=1pjjtEI2wNu4c6cn",
+    description:
+      "As a developer at Bulkpe, I’m excited to showcase how our innovative keyboard shortcuts can streamline every task, putting the power of efficiency right at your fingertips. These shortcuts are designed to enhance productivity, allowing users to navigate and execute commands quickly, reducing time spent on repetitive tasks.",
   },
   {
     id: 3,
-    title: '30-Day Challenge: MCA Data Download Feature!',
-    linkedInPostUrl: 'https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7206267300151259136',
-    description: 'On Day 30 of our 30-Day Challenge, we proudly launch the MCA Filing Download feature, providing businesses effortless access to compliance documents via the Bulkpe web app, facilitating vendor due diligence, streamlining compliance, and saving time with just a few clicks; this feature enhances efficiency and supports better decision-making, ensuring businesses meet their regulatory obligations—special thanks to Sathya Narayanan, Harish Karthick, Jai Venkatesh, Shreya Rani, Sathish Ramasami, Aakash S., Arun Surya, Rashim Raseeth Ali, and Dilip Seenivasan for their amazing teamwork!',
+    title: "30-Day Challenge: MCA Data Download Feature!",
+    linkedInPostUrl:
+      "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7206267300151259136",
+    description:
+      "On Day 30 of our 30-Day Challenge, we proudly launch the MCA Filing Download feature, providing businesses effortless access to compliance documents via the Bulkpe web app, facilitating vendor due diligence, streamlining compliance, and saving time with just a few clicks; this feature enhances efficiency and supports better decision-making, ensuring businesses meet their regulatory obligations—special thanks to Sathya Narayanan, Harish Karthick, Jai Venkatesh, Shreya Rani, Sathish Ramasami, Aakash S., Arun Surya, Rashim Raseeth Ali, and Dilip Seenivasan for their amazing teamwork!",
   },
 ];
 
@@ -37,9 +43,13 @@ interface AchievementCardProps {
   description: string;
 }
 
-const AchievementCard: React.FC<AchievementCardProps> = ({ title, linkedInPostUrl, description }) => {
+const AchievementCard: React.FC<AchievementCardProps> = ({
+  title,
+  linkedInPostUrl,
+  description,
+}) => {
   const cardRef = useRef(null);
-  const isInView = useInView(cardRef, { once: true, margin: '-100px' });
+  const isInView = useInView(cardRef, { once: true, margin: "-100px" });
 
   return (
     <motion.div
@@ -95,7 +105,6 @@ const MyAchievementsSection: React.FC = () => {
 
 export default MyAchievementsSection;
 
-
 // 'use client'
 
 // import { useRef } from 'react';
@@ -128,7 +137,6 @@ export default MyAchievementsSection;
 //     linkedInPostUrl: 'https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7206267300151259136',
 //     description: 'On Day 30 of our 30-Day Challenge, we proudly launch the MCA Filing Download feature, providing businesses effortless access to compliance documents via the Bulkpe web app, facilitating vendor due diligence, streamlining compliance, and saving time with just a few clicks; this feature enhances efficiency and supports better decision-making, ensuring businesses meet their regulatory obligations—special thanks to Sathya Narayanan, Harish Karthick, Jai Venkatesh, Shreya Rani, Sathish Ramasami, Aakash S., Arun Surya, Rashim Raseeth Ali, and Dilip Seenivasan for their amazing teamwork!.',
 // },
-
 
 // ];
 

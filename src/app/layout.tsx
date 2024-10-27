@@ -3,19 +3,20 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
+  src: "./fonts/Poppins-Light.ttf",
+  variable: "--font-poppins-sans",
   weight: "100 900",
 });
 const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
+  src: "./fonts/Poppins-Medium.ttf",
+  variable: "--font-poppins-mono",
   weight: "100 900",
 });
 
 export const metadata: Metadata = {
   title: "Aakash Portfolio",
-  description: "Showcasing Aakash's professional projects, skills, and expertise in web development and design.",
+  description:
+    "Showcasing Aakash's professional projects, skills, and expertise in web development and design.",
 };
 
 export default function RootLayout({
