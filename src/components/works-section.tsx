@@ -38,16 +38,18 @@ const works = [
   },
   {
     id: 4,
-    title: "Misscallpay",
+    title: "DPCC App & WebApp",
     shortDescription:
-      "No SmartPhone? No Internet? No Problem! Misscall Pay can help you!",
+      "Learning made easy with DP live classes & quizzes at your fingertips!",
     longDescription:
-      'Indian\'s began using mobile phones with "missed calls". Now anyone can make payments with it! We aim to make transacting without cash easy. As simple as the very first thing we did with mobile phones. Pay with MissCallPay!',
-    imageUrl: "/images/MissCallPay.png",
+      "Developed the front-end of DP Career Connect LMS app, integrating live classes, quizzes, and interactive learning tools into a seamless, intuitive platform. Focused on speed, clarity, and a dynamic learning experience.",
+    imageUrl: "/images/dp-mockup.jpg",
     projectLink:
-      "https://play.google.com/store/apps/details?id=com.misscallpay.bharat",
+      "https://play.google.com/store/apps/details?id=com.app.dpcareerconnect&hl=en",
+    additionalLink: "https://joindpcc.click", // Added additional link
   },
 ];
+
 function WorkCard({ work, onClick }: { work: Project; onClick: () => void }) {
   return (
     <motion.div
@@ -72,6 +74,24 @@ function WorkCard({ work, onClick }: { work: Project; onClick: () => void }) {
         <p className="text-sm md:text-base text-gray-400">
           {work.shortDescription}
         </p>
+        <a
+          href={work.projectLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-white text-black px-4 py-2 rounded-md text-sm font-bold hover:bg-gray-200 transition-colors duration-200 mt-2"
+        >
+          View Project
+        </a>
+        {work.additionalLink && (
+          <a
+            href={work.additionalLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-white text-black px-4 py-2 rounded-md text-sm font-bold hover:bg-gray-200 transition-colors duration-200 mt-2 ml-2"
+          >
+            WebApp
+          </a>
+        )}
       </div>
     </motion.div>
   );
@@ -84,6 +104,7 @@ interface Project {
   longDescription: string;
   imageUrl: string;
   projectLink: string;
+  additionalLink?: string; // Added optional additionalLink property
   icon?: JSX.Element;
 }
 
@@ -147,6 +168,16 @@ function ProjectPopup({
         >
           View Project
         </a>
+        {project.additionalLink && (
+          <a
+            href={project.additionalLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-white text-black px-4 py-2 rounded-md text-sm font-bold hover:bg-gray-200 transition-colors duration-200 mt-2 ml-2"
+          >
+            WebApp̀
+          </a>
+        )}
       </motion.div>
     </motion.div>
   );
