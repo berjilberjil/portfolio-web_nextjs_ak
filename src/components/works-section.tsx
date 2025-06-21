@@ -8,34 +8,36 @@ import { X } from "lucide-react";
 const works = [
   {
     id: 1,
-    title: "Bulkpe App",
+    title: "Blynk - Pay with Credit Card",
     shortDescription:
-      "A Flutter-based mobile app for Bulk Transactions (PlayStore)",
+      "Use Credit Card for Paying Vendors - Instant Payments made simple at 1%",
     longDescription:
-      "Instant Business Banking for Indian MSMEs - Open an Axis Bank Current Account in Minutes! Welcome to BulkPe - Your Instant Business Banking Solution! Open a current account in under 5 minutes and experience seamless payments for Indian MSMEs.",
-    imageUrl: "/images/bulkpe-app.png",
+      "Pay Vendors with Your Credit Card – Now at 1% only Blynk (Formerly Bulkpe) makes business payments smarter! Now, pay your vendors and utility bills seamlessly using your credit card and get 1% off on every transactions.",
+    imageUrl: "/images/blynk.png",
     projectLink:
-      "https://play.google.com/store/apps/details?id=com.app.bulkpe&pcampaignid=web_share",
+      "https://play.google.com/store/apps/details?id=com.app.bulkpe&hl=en_IN",
   },
   {
     id: 2,
     title: "Bulkpe WebApp",
-    shortDescription: "A Flutter-based Web app Product for Enterprises",
+    shortDescription: "Simplifying collections and payments for your Business",
     longDescription:
       "End-to-end banking and payments suite for businesses to scale and grow.",
     imageUrl: "https://bulkpe.in/assets/three_phone.webp",
-    projectLink: "https://bulkpe.in/",
+    projectLink: "https://app.bulkpe.in/",
   },
   {
     id: 3,
-    title: "Weather App",
-    shortDescription: "A Flutter-based app for Weather Check (PlayStore)",
+    title: "BillO - Pay Bills & Get Reward",
+    shortDescription:
+      "BillO karo. Cashback pao - Pay all your bills in 1 tap & earn lifetime cashback",
     longDescription:
-      "Featuring a clean and intuitive interface, this Weather App makes it easy to find the information you need. You can view current temperature, wind speed and direction, humidity, and more.",
-    imageUrl: "/images/weather-app.png",
+      "Meet BillO - Where Bills Turn Into Rewards.Powered by Bulkpe, BillO is India’s first one-tap bulk bill payment app with guaranteed cashback for a lifetime. Automate your electricity, mobile, water, gas, and 25+ Bill Payment services - and get rewarded instantly every time.",
+    imageUrl: "/images/billO.png",
     projectLink:
-      "https://play.google.com/store/apps/details?id=com.github.aakashak01.weatherapp&pcampaignid=web_share",
+      "https://play.google.com/store/apps/details?id=com.bulkpe.billO&hl=en_IN",
   },
+
   {
     id: 4,
     title: "DPCC App & WebApp",
@@ -47,6 +49,28 @@ const works = [
     projectLink:
       "https://play.google.com/store/apps/details?id=com.app.dpcareerconnect&hl=en",
     additionalLink: "https://joindpcc.click", // Added additional link
+  },
+  {
+    id: 5,
+    title: "Bulkpe Card",
+    shortDescription:
+      "Load money, spend anywhere online, and save big with Bulkpe Cards!",
+    longDescription:
+      "Introducing Bulkpe Cards, the ultimate prepaid card that makes every online spend rewarding! Whether you're shopping, paying bills, or subscribing to your favorite services, Bulkpe Cards gives you the power to load money easily and earn assured cashback on every transaction.",
+    imageUrl: "/images/bulkpecard.png",
+    projectLink:
+      "https://play.google.com/store/apps/details?id=com.bulkpe.card.app&hl=en_IN",
+  },
+  {
+    id: 6,
+    title: "Chennai Business Loan - Bulkpe",
+    shortDescription:
+      "10 lakhs Loans for Chennai Businesses. Quick approval. Easy EMIs. 100% digital.",
+    longDescription:
+      "Chennai Business Loan is a financial app from Bulkpe, built to empower micro and small business owners across Chennai. Whether you're a shopkeeper, trader, service provider, or small manufacturer - we make it easy for you to get the credit you need to grow.chenna",
+    imageUrl: "/images/chennai-loan.png",
+    projectLink:
+      "https://play.google.com/store/apps/details?id=com.chennailoanapp&hl=en_IN",
   },
 ];
 
